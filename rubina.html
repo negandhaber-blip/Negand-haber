@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rubina</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  transition: 0.3s;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 0 0 15px 15px;
+  gap: 10px;
+}
+
+.navbar img {
+  width: 60px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/* BUTTON */
+.navbar button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #777;
+}
+
+/* DARK MODE BUTTON */
+.darkmode {
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  width: 120px;
+  height: 45px;
+  border: none;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+ 
+}
+
+.darkmode:hover {
+  background: #000;
+  color: white;
+  box-shadow: 0 0 10px red;
+}
+
+/* HABER */
+.haberyazı {
+  background-color: #ff0000;
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 18px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* VİDEO */
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+.video iframe {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  border-radius: 15px;
+}
+
+/* REKLAM */
+#container-ca41661e7c73b16330265dfea9e8adb0 {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* DARK MODE */
+body.dark {
+  background: #000;
+  color: white;
+}
+
+body.dark .navbar {
+  background: #222;
+}
+
+body.dark .haberyazı {
+  background: #181818;
+}
+
+body.dark .navbar button {
+  background: #000;
+}
+
+/* MOBİL */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .video iframe {
+    height: 220px;
+  }
+
+  .haberyazı {
+    font-size: 16px;
+  }
+
+  .darkmode {
+    width: 100px;
+    height: 40px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+     <img src="logo.png" alt="">
+  <button onclick="window.location.href='index.html'">Anasayfa</button>
+
+</div>
+ <button class="darkmode" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+ <audio id="hoverSound" src="dilligafanditmeans-kick-drum-263837.mp3" preload="auto"></audio>
+<!-- REKLAM -->
+<body>
+
+
+<!-- HABER -->
+<div class="haberyazı">
+Rubina Khaldi, Pakistan'da 16 yaşında evlendirildi. Ancak, gittiği evdeki baskılara dayanamayarak geri döndü. Bu durum üzerine Rubina'nın amcası ve dedesi, törenin gözleri önünde infaz gerçekleştirdi. İşte sansürsüz video
+</div>
+
+<!-- VİDEO -->
+<div class="video">
+  <iframe src="https://jonturk.tr/wp-content/uploads/2026/04/karokari1.mp4"></iframe>
+</div>
+
+<div class="haberyazı">
+Rubina pakistanda bir törenle infaz edildiği sırada çekilen videoda amcası ve dedesinin Rubina'nın kafasına silah dayayıp ateşlediği görülüyor. Olaydan sonra dede ile beraber 10 polis daha tutuklanmış
+</div>
+
+</body>
+<div id="container-ca41661e7c73b16330265dfea9e8adb0"></div>
+
+<script async="async" data-cfasync="true"
+src="https://pl29182700.profitablecpmratenetwork.com/ca41661e7c73b16330265dfea9e8adb0/invoke.js">
+</script>
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+const cards = document.querySelectorAll(".darkmode");
+const sound = document.getElementById("hoverSound");
+
+cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        sound.currentTime = 0; // başa sar
+        sound.play();
+    });
+});
+</script>
+</html>

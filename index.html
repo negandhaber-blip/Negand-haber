@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEGAND HABER</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="logo.png" alt="" width="150px" height="120px" style="border-radius: 15px;">
+    <h1></h1>
+    <input type="text" id="search" placeholder="Haber ara...">
+    
+</header>
+
+<!-- NAVBAR -->
+ <div>
+    <button class="darkmode" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <audio id="hoverSound" src="dilligafanditmeans-kick-drum-263837.mp3" preload="auto"></audio>
+ </div>
+ 
+
+<nav class="nav">
+    <button onclick="filterNews('hepsi')">Tümü</button>
+    <button onclick="filterNews('gündem')">Gündem</button>
+    <button onclick="filterNews('sansürsüz')">Sansürsüz</button>
+    <button onclick="filterNews('spor')">Spor</button>
+</nav>
+
+<!-- HABERLER -->
+<section id="newsContainer" class="news-container">
+    <div class="news" data-category="sansürsüz">
+        <h2>sansürsüz</h2>
+        <p>Haberleri sansürsüz bir şekilde görün</p>
+    </div>
+
+    <div class="news" data-category="spor">
+        <h2>Spor</h2>
+        <p>Maç sonuçları ve daha fazlası</p>
+    </div>
+
+    <div class="news" data-category="gündem">
+        <h2>Gündem</h2>
+        <p>Tr nin Gündemindeki haberleri görün</p>
+    </div>
+
+    <div class="news" data-category="gündem" onclick="location.href='isa-aras-femboy.html'">
+        <h2>İsa aras femboymuydu?</h2>
+        <p>Geçtiğimiz günlerde kahraman maraşın onikişubat ilçesinde bir okula saldırı yaparak Türkiye gündemine düşen İsa Aras Mersinlinin sosyal nedyada yayılan videosunda etek giyip poz verdiği görüldü işte videonun sansürsüz hali</p>
+    </div>
+
+ <div class="news" data-category="sansürsüz" onclick="location.href='rubina.html'">
+        <h2>Pakistandan kan donduran olay</h2>
+        <p>Pakistanda yaşayan Rubina khaldi 16 yaşındaydı. evlendirildi ama gittiği evde baskılara dayanamadı diye geri döndü. bu durum üzerine Rubina'nın amcası ve dedesi bir olup törenin gözleri önünde infaz gerçekleştirdi. Haberin devamı ve sansürsüz video için tıklayın</p>
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+<script>
+// 🔍 ARAMA SİSTEMİ
+document.getElementById("search").addEventListener("keyup", function () {
+    let value = this.value.toLowerCase();
+    let news = document.querySelectorAll(".news");
+
+    news.forEach(n => {
+        let text = n.innerText.toLowerCase();
+        n.style.display = text.includes(value) ? "block" : "none";
+    });
+});
+
+// 📂 KATEGORİ FİLTRE
+function filterNews(category) {
+    let news = document.querySelectorAll(".news");
+
+    news.forEach(n => {
+        if (category === "hepsi") {
+            n.style.display = "block";
+        } else {
+            n.style.display =
+                n.getAttribute("data-category") === category
+                ? "block"
+                : "none";
+        }
+    });
+}
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+const cards = document.querySelectorAll(".darkmode");
+const sound = document.getElementById("hoverSound");
+
+cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        sound.currentTime = 0; // başa sar
+        sound.play();
+    });
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+    background: #c40000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+}
+
+.header input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 250px;
+    max-width: 90%;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+
+.nav button {
+    padding: 10px 15px;
+    border: none;
+    background: #c40000;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav button:hover {
+    background: #ff0000;
+    transform: scale(1.05);
+}
+
+/* NEWS CONTAINER (DÜZELTİLDİ) */
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* NEWS */
+.news {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border-left: 5px solid #c40000;
+    width: 300px;
+}
+
+.news:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.news h2 {
+    color: #c40000;
+    margin-bottom: 10px;
+}
+
+/* DARK MODE BUTTON (DÜZELTİLDİ) */
+.darkmode {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #444;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 5px white;
+}
+
+.darkmode:hover {
+    background: #2c2c2c;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #000;
+    color: white;
+}
+
+body.dark .header {
+    background: #2c2c2c;
+}
+
+body.dark .nav {
+    background: #181818;
+}
+
+body.dark .news {
+    background: #1f1f1f;
+    color: white;
+}
+
+body.dark .nav button {
+    background: #333;
+}
+
+body.dark .nav button:hover {
+    background: #555;
+}
+
+/* MOBİL */
+@media (max-width: 768px) {
+
+    .news {
+        width: 90%;
+    }
+
+    .header input {
+        width: 90%;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
